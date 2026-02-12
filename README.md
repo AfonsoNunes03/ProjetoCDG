@@ -3,7 +3,7 @@
 * **Grupo nº:** [2]
 * **Membros:**
  * Afonso Alexandre Nunes - 2023141213
- * [Nome do Aluno 2] - [Nº de Estudante]
+ * Guilherme Ventura - 2023132296
  * [Nome do Aluno 3] - [Nº de Estudante]
 ## Organização do Repositório
 A estrutura deste projeto segue as boas práticas de Ciência de Dados e Engenharia de Software:
