@@ -4,7 +4,7 @@
 * **Membros:**
  * Afonso Alexandre Nunes - 2023141213
  * Guilherme Ventura - 2023132296
- * [Nome do Aluno 3] - [Nº de Estudante]
+ * Duarte Ribeiro - a2023142440
 ## Organização do Repositório
 A estrutura deste projeto segue as boas práticas de Ciência de Dados e Engenharia de Software:
 * **`data/`**: Armazenamento de dados (dados brutos em `raw/` e processados em `processed/`).
