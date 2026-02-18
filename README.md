@@ -4,7 +4,7 @@
 * **Grupo nº:** 2 
 * **Membros:** 
   * Afonso Nunes - 2023141213 
-  * [Nome do Aluno 2] - [Nº de Estudante] 
+  * Guilherme Ventura - 2023132296 
   * [Nome do Aluno 3] - [Nº de Estudante] 
  
 ## Organização do Repositório 
