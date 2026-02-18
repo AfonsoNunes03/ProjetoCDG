@@ -40,6 +40,19 @@ O projeto seguirá o ciclo CRISP-DM, com as decisões documentadas no GitHub.
 *   **Controlo de Versões:** Git Flow simplificado (`main` para entregas, `dev` para trabalho).
 *   **Documentação:** Pasta `docs/` atualizada a cada Milestone.
 
+### Divisão de Papéis (Preliminar)
+*   **Membro 1 (Afonso Nunes):** Gestão do Repositório (Git Master) e Integração de Código.
+*   **Membro 2:** [Nome] - Responsável pela recolha e validação das Regras de Negócio (Legislação).
+*   **Membro 3:** [Nome] - Responsável pela Análise Exploratória de Dados (EDA) e Visualização.
+
+### Ferramentas e Tecnologias
+Para a implementação destes objetivos, utilizaremos a seguinte stack tecnológica baseada em Python:
+*   **Pandas:** Manipulação e limpeza dos dados tabulares (DataFrames).
+*   **Matplotlib / Seaborn:** Criação de gráficos estáticos para relatórios e análise exploratória.
+*   **OpenPyXL:** Leitura e escrita avançada de ficheiros Excel (essencial para lidar com o formato original dos dados da CML).
+*   **Jupyter Notebooks:** Ambiente de desenvolvimento interativo para prototipagem rápida e documentação de código.
+*   **Git / GitHub:** Controlo de versões e gestão de projeto (Issues/Projects).
+
 ## 5. Análise de Viabilidade dos Dados (Data Understanding)
 - **Fonte:** Dataset `amostras_desafio.xlsx` (anonimizado, fornecido pela CML).
 - **Volume:** ~100 registos iniciais (amostra representativa).
