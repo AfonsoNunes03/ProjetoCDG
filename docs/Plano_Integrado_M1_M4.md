@@ -27,27 +27,27 @@ Este documento detalha o plano de execução para o projeto "Análise de Elegibi
 ### Tarefas Detalhadas (Checklist M1)
 #### 1. Business Understanding (O que é para fazer?)
 - [x] **Ler Feedback da Professora:** Abandonar comparação de preços de mercado. Focar nas Regras Oficiais.
-- [ ] **Levantamento de Regras:** Criar documento `docs/regras_programas_oficiais.md` com:
-    - [ ] Regras Porta 65 Jovem (Idade, Rendimentos, Taxa Esforço).
-    - [ ] Regras Porta 65 + (Idade, Rendimentos).
-    - [ ] Regras PRA - Programa Renda Acessível (Escalões de rendimento, Tipologias).
-    - [ ] Regras SMA - Subsídio Municipal ao Arrendamento.
-- [ ] **Preenchimento do Template:** Completar `docs/M1_iniciacao.md` com a nova visão do projeto.
+- [x] **Levantamento de Regras:** Criar documento `docs/regras_programas_oficiais.md` com:
+    - [x] Regras Porta 65 Jovem (Idade, Rendimentos, Taxa Esforço).
+    - [x] Regras Porta 65 + (Idade, Rendimentos).
+    - [x] Regras PRA - Programa Renda Acessível (Escalões de rendimento, Tipologias).
+    - [x] Regras SMA - Subsídio Municipal ao Arrendamento.
+- [x] **Preenchimento do Template:** Completar `docs/M1_iniciacao.md` com a nova visão do projeto.
 
 #### 2. Setup Técnico (Infraestrutura)
 - [x] Repositório Criado.
-- [ ] **Estrutura de Pastas Refinada:**
+- [x] **Estrutura de Pastas Refinada:**
     - Garantir existência de `data/raw`, `data/processed`, `notebooks`, `src`, `docs`, `reports/figures`.
     - Garantir `.gitignore` correto (ignorar venv, .DS_Store, caches).
-- [ ] **README.md Final:** Atualizar para refletir o novo objetivo do projeto (foco na elegibilidade).
+- [x] **README.md Final:** Atualizar para refletir o novo objetivo do projeto (foco na elegibilidade).
 
 #### 3. Data Understanding (O que temos?)
-- [ ] **Notebook de Inspeção (`notebooks/1.0_eda_inicial.ipynb`):**
-    - Carregar `amostrasdesafio0124 (1).xlsx`.
-    - `df.info()`, `df.describe()`.
-    - Verificar nulos e tipos de dados.
-    - Analisar distribuição geográfica (Lisboa vs Outros Concelhos).
-    - [ ] **Output:** Secção "Descrição dos Dados" no `docs/M1_iniciacao.md`.
+- [x] **Notebook de Inspeção (`notebooks/1.0_eda_inicial.ipynb`):**
+    - [x] Carregar `amostras_desafio.xlsx`.
+    - [x] `df.info()`, `df.describe()`.
+    - [x] Verificar nulos e tipos de dados.
+    - [x] Analisar distribuição geográfica (Lisboa vs Outros Concelhos).
+    - [x] **Output:** Secção "Descrição dos Dados" no `docs/M1_iniciacao.md` e Gráficos em `reports/figures/`.
 
 ---
 
@@ -99,9 +99,13 @@ Este documento detalha o plano de execução para o projeto "Análise de Elegibi
 
 ---
 
-## Ações Imediatas (Para completar M1 até 24/02)
-1. **Hoje:** Criar `docs/regras_programas_oficiais.md` (Pesquisa Bibliográfica).
-2. **Hoje/Amanhã:** Atualizar `docs/M1_iniciacao.md` com os objetivos SMART revisados.
-3. **Até 20/02:** Criar e correr o notebook de inspeção inicial (`1.0_eda_inicial.ipynb`).
-4. **Até 22/02:** Atualizar `README.md` e organizar repo.
-5. **23/02:** Criar Release v1.0-M1 no GitHub.
+## Ações Concluídas (Milestone 1)
+- [x] Criado `docs/regras_programas_oficiais.md` com pesquisa de legislação (Porta 65, PRA, SMAA).
+- [x] Atualizado `docs/M1_iniciacao.md` com Objetivos SMART focados na elegibilidade.
+- [x] Configurado repositório GitHub com estrutura profissional (`data/`, `notebooks/`, `src/`).
+- [x] Criado notebook `1.0_eda_inicial.ipynb` e gerados gráficos de análise preliminar.
+- [x] Criado `docs/resumoM1.md` para apoio à apresentação.
+
+## Próximos Passos (Início da Milestone 2)
+1.  **Limpeza de Dados:** Criar script para normalizar nomes de concelhos e remover espaços.
+2.  **Transformação:** Converter intervalos de idade ("Menos de 35") em números (34).

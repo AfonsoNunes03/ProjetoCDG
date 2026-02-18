@@ -1,38 +1,42 @@
-# Milestone 1: Iniciação e Compreensão dos Dados
 
-## 1. Business Understanding (Compreensão do Negócio)
+# Milestone 1: Iniciação e Definição do Projeto
 
-### 1.1. Definição do Problema
-O acesso à habitação em Lisboa tornou-se um desafio crítico devido ao aumento dos preços de imobiliário (venda e arrendamento) que não foi acompanhado por um crescimento proporcional dos rendimentos das famílias. Existe uma necessidade premente de identificar o "gap" de acessibilidade e caracterizar os perfis populacionais mais afetados.
+## 1. Contexto e Problema de Negócio (Business Understanding)
+A crise habitacional em Lisboa afeta tanto jovens como famílias de classe média e baixa, que enfrentam graves dificuldades em encontrar habitação a preços compatíveis com os seus rendimentos.
 
-### 1.2. Objetivos do Projeto
-**Objetivo SMART:**
-> Desenvolver, até ao final do semestre, um modelo de análise que cruze dados de rendimento familiar (amostra de adesão) com dados de mercado imobiliário público (INE/Web Scraping), permitindo calcular um "Índice de Acessibilidade" por freguesia e tipologia familiar.
+O Município de Lisboa e o Governo disponibilizam vários programas de apoio (Porta 65, Programa Renda Acessível, Subsídio Municipal ao Arrendamento), mas existe uma lacuna de informação sobre **quem são os candidatos que realmente se qualificam** para estes apoios e **quantas pessoas ficam "de fora"** (sem acesso ao mercado e sem acesso aos apoios).
 
-### 1.3. Critérios de Sucesso
-- Caracterização completa da amostra de candidatos fornecida.
-- Integração bem-sucedida com dados externos (INE).
-- Criação de visualizações claras sobre a distribuição de rendimentos vs. custos habitacionais.
+### Pergunta Central do Projeto:
+> **"Dada uma amostra de candidatos residentes (ou aspirantes a residentes) em Lisboa, qual a taxa de cobertura real dos atuais programas de apoio habitacional?"**
+
+## 2. Objetivos SMART
+Estes objetivos foram redefinidos para focar na análise de elegibilidade, abandonando a comparação com preços de mercado especulativos.
+
+1.  **Objetivo 1 (Mapeamento de Regras):** Desenvolver um algoritmo capaz de replicar as regras de acesso dos 3 principais programas (Porta 65, PRA, SMAA) com 95% de precisão face à legislação, até à Milestone 3.
+2.  **Objetivo 2 (Taxa de Cobertura):** Quantificar, para a amostra fornecida, a percentagem de candidatos elegíveis para pelo menos um apoio habitacional e caracterizar os perfis "excluídos", até ao final do semestre.
+3.  **Objetivo 3 (Tipologia Familiar):** Identificar se as tipologias habitacionais disponíveis (T0-T4) são adequadas à dimensão dos agregados familiares candidatos da amostra.
+
+## 3. Metodologia de Gestão
+O projeto seguirá o ciclo CRISP-DM, com as decisões documentadas no GitHub.
+*   **Controlo de Versões:** Git Flow simplificado (`main` para entregas, `dev` para trabalho).
+*   **Documentação:** Pasta `docs/` atualizada a cada Milestone.
+
+## 4. Análise de Viabilidade dos Dados (Data Understanding)
+- **Fonte:** Dataset `amostras_desafio.xlsx` (anonimizado, fornecido pela CML).
+- **Volume:** ~100 registos iniciais (amostra representativa).
+- **Variáveis Chave:**
+    - `Rendimento Global`: Crucial para o cálculo da Taxa de Esforço.
+    - `Nº Elem. Agregado`: Define a tipologia máxima permitida.
+    - `Escalão Etário`: Define a elegibilidade para programas jovens (Porta 65).
+    - `Concelho`: Define a elegibilidade geográfica (apenas Lisboa vs. AML).
+
+## 5. Cronograma Estimado
+| Fase | Prazo | Entregável |
+| :--- | :--- | :--- |
+| **M1: Iniciação** | 24 Fev | Definição de Regras e Setup do Repo. |
+| **M2: Exploração** | TBD (Março) | Limpeza de Dados e EDA (Notebooks). |
+| **M3: Modelação** | TBD (Abril) | Motor de Regras e Classificação de Elegibilidade. |
+| **M4: Finalização**| TBD (Maio) | Dashboard e Relatório Final. |
 
 ---
-
-## 2. Data Understanding (Compreensão dos Dados)
-
-### 2.1. Fontes de Dados Iniciais
-- **Amostra Desafio (Interna):** Dados anonimizados de candidatos a programas de habitação, contendo variáveis socioeconómicas, composição do agregado e rendimentos.
-- **Dados Externos (INE):** Estatísticas de rendas e preços de venda por m².
-
-### 2.2. Exploração Inicial (Resumo da Amostra)
-**Análise Preliminar (Baseada em 100 registos):**
-- **Dimensão:** 100 linhas (candidatos) e 8 colunas.
-- **Geografia:** A maioria dos candidatos reside no concelho de Lisboa (61%), mas há representação de outros 18 concelhos (ex: Amadora, Sintra, Loures), o que levanta questões sobre a elegibilidade para programas municipais.
-- **Perfil Etário:**
-    - População Jovem (< 35 anos): 46% (Forte candidato ao Porta 65 Jovem).
-    - Adultos (35-65 anos): 47%.
-    - Seniores (> 65 anos): 7%.
-- **Dimensão do Agregado:**
-    - Predominância de agregados singulares (56%) e de 2 pessoas (24%).
-- **Rendimentos (Valores Anuais):**
-    - **Média:** €14.730,70
-    - **Mediana:** €12.778,40
-    - Estes valores sugerem que uma grande parte da amostra se enquadra nos limites de rendimento para habitação acessível.
+*Data de última atualização: 17/02/2026*
