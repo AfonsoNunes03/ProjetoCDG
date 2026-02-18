@@ -16,7 +16,7 @@ Estes objetivos foram redefinidos para focar na análise de elegibilidade, aband
 2.  **Objetivo 2 (Taxa de Cobertura):** Quantificar, para a amostra fornecida, a percentagem de candidatos elegíveis para pelo menos um apoio habitacional e caracterizar os perfis "excluídos", até ao final do semestre.
 3.  **Objetivo 3 (Tipologia Familiar):** Identificar se as tipologias habitacionais disponíveis (T0-T4) são adequadas à dimensão dos agregados familiares candidatos da amostra.
 
-### ✅ Auto-Correção (Checklist SMART)
+### ✅ (Checklist SMART)
 - [x] **S (Específico):** O que vamos prever/analisar está claro? (Sim: Elegibilidade aos programas baseada em regras oficiais).
 - [x] **M (Mensurável):** Definimos uma métrica? (Sim: Taxa de Cobertura e Precisão das regras).
 - [x] **A (Atingível):** O nosso dataset permite isto? (Sim: Temos rendimentos, idade e agregado).
