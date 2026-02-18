@@ -1,9 +1,9 @@
 # Projeto Desafio Habitação: Análise de Elegibilidade e Acesso
 
 ## Identificação da Equipa 
-* **Grupo nº:** [Número] 
+* **Grupo nº:** 2 
 * **Membros:** 
-  * [Nome do Aluno 1] - [Nº de Estudante] 
+  * Afonso Nunes - 2023141213 
   * [Nome do Aluno 2] - [Nº de Estudante] 
   * [Nome do Aluno 3] - [Nº de Estudante] 
  
