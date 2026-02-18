@@ -41,9 +41,9 @@ O projeto seguirá o ciclo CRISP-DM, com as decisões documentadas no GitHub.
 *   **Documentação:** Pasta `docs/` atualizada a cada Milestone.
 
 ### Divisão de Papéis (Preliminar)
-*   **Membro 1 (Afonso Nunes):** Gestão do Repositório (Git Master) e Integração de Código.
-*   **Membro 2:** [Nome] - Responsável pela recolha e validação das Regras de Negócio (Legislação).
-*   **Membro 3:** [Nome] - Responsável pela Análise Exploratória de Dados (EDA) e Visualização.
+*   **Membro 1:** Afonso Nunes - Gestão do Repositório e Integração de Código.
+*   **Membro 2:** Duarte Ribeiro - Responsável pela recolha e validação das Regras de Negócio (Legislação).
+*   **Membro 3:** Guilherme Ventura - Responsável pela Análise Exploratória de Dados (EDA) e Visualização.
 
 ### Ferramentas e Tecnologias
 Para a implementação destes objetivos, utilizaremos a seguinte stack tecnológica baseada em Python:
