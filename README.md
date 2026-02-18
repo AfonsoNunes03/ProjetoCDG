@@ -5,7 +5,7 @@
 * **Membros:** 
   * Afonso Nunes - 2023141213 
   * Guilherme Ventura - 2023132296 
-  * [Nome do Aluno 3] - [Nº de Estudante] 
+  * Duarte Ribeiro - 2023142440
  
 ## Organização do Repositório 
  
