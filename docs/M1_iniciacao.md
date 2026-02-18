@@ -56,11 +56,18 @@ Para a implementação destes objetivos, utilizaremos a seguinte stack tecnológ
 ## 5. Análise de Viabilidade dos Dados (Data Understanding)
 - **Fonte:** Dataset `amostras_desafio.xlsx` (anonimizado, fornecido pela CML).
 - **Volume:** ~100 registos iniciais (amostra representativa).
-- **Variáveis Chave:**
-    - `Rendimento Global`: Crucial para o cálculo da Taxa de Esforço.
-    - `Nº Elem. Agregado`: Define a tipologia máxima permitida.
-    - `Escalão Etário`: Define a elegibilidade para programas jovens (Porta 65).
-    - `Concelho`: Define a elegibilidade geográfica (apenas Lisboa vs. AML).
+- **Todas as Variáveis do Dataset:**
+
+| Variável Original | Nome Interno | Descrição | Relevância |
+| :--- | :--- | :--- | :--- |
+| `Contexto` | `contexto` | Tipo de candidatura (ex: arrendamento, realojamento) | Média |
+| `Estado` | `estado` | Estado atual do processo do candidato | Média |
+| `Data Estado` | `data_estado` | Data da última atualização do estado | Baixa |
+| `Escalão Etário` | `escalao_etario` | Faixa etária do candidato (< 35, 35-65, > 65 anos) | **Alta** — define elegibilidade Porta 65 Jovem vs. Porta 65+ |
+| `Nº Elem. Agregado` | `n_elem_agregado` | Número total de elementos do agregado familiar | **Alta** — define a tipologia mínima necessária (T0 a T4+) |
+| `Nº Adultos` | `n_adultos` | Número de adultos no agregado | **Alta** — relevante para cálculo de rendimento per capita |
+| `Concelho` | `concelho` | Município de residência do candidato | **Alta** — define elegibilidade geográfica (Lisboa vs. AML) |
+| `Rendimento Global (IRS e Rend. Isentos)` | `rendimento_anual_bruto` | Rendimento anual bruto do agregado (€) | **Alta** — base para o cálculo da Taxa de Esforço e limites de elegibilidade |
 
 ## 6. Cronograma Estimado
 | Fase | Prazo | Entregável |
