@@ -1,44 +1,60 @@
-# --- PROTEÇÃO DE DADOS (conforme recomendado pelo docente) ---
+# --- PROTEÇÃO DE DADOS ---
 *.csv
 *.xlsx
 *.xls
 *.json
 *.sql
 *.db
+*.sqlite
+*.parquet
+*.feather
+*.sav
+*.dta
 
-# --- PASTAS LOCAIS (não partilhar no GitHub) ---
-data/
-notebooks/
-src/
-venv/
-requirements.txt
-resumoM1.md
-
-# --- MILESTONES AUXILIARES (documento interno) ---
-milestones/regras_programas_oficiais.md
-
-# --- KAGGLE ESPECÍFICO ---
-.kaggle/
-kaggle.json
-
-# --- PYTHON & AMBIENTES ---
-__pycache__/
-*.py[cod]
-*$py.class
+# --- PROTEÇÃO DE CÓDIGO E AMBIENTE ---
+*.py
+*.ipynb
+*.r
+*.rmd
+*.qmd
+*.sh
+*.bat
 .venv/
+venv/
 env/
-
-# --- JUPYTER & NOTEBOOKS ---
+__pycache__/
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/*
+.Rhistory
+.RData
+
+# --- PROTEÇÃO DE CONFIGURAÇÕES ---
+.env
+*.yaml
+*.yml
+.vscode/
+.idea/
 
 # --- DOCUMENTOS LOCAIS (não partilhar) ---
 *.pdf
-read_pdf.py
+*.txt
+resumoM1.md
+milestones/regras_programas_oficiais.md
+data/
+notebooks/
+src/
+requirements.txt
 
-# --- SISTEMA & IDEs ---
+# --- SISTEMA ---
 .DS_Store
-.vscode/
-.idea/
 *.log
 .agent/
+
+# --- O QUE É PERMITIDO (EXCEPÇÕES) ---
+# Permitimos apenas a documentação e os resultados visuais
+!.gitignore
+!README.md
+!/milestones/*.md
+!/assets/
+!/assets/graficos/*
+!/assets/diagramas/*
+!/assets/demos/*
