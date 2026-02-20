@@ -10,18 +10,18 @@ O Município de Lisboa e o Governo disponibilizam vários programas de apoio (Po
 > **"Dada uma amostra de candidatos residentes (ou aspirantes a residentes) em Lisboa, qual a taxa de cobertura real dos atuais programas de apoio habitacional?"**
 
 ## 2. Objetivos SMART
-Estes objetivos foram redefinidos para focar na análise de elegibilidade, abandonando a comparação com preços de mercado especulativos.
+Estes objetivos foram definidos para focar na análise de elegibilidade, comparando os candidatos com as regras oficiais dos programas de apoio.
 
 1.  **Objetivo 1 (Mapeamento de Regras):** Desenvolver um algoritmo capaz de replicar as regras de acesso dos 3 principais programas (Porta 65, PRA, SMAA) com 95% de precisão face à legislação, até à Milestone 3.
 2.  **Objetivo 2 (Taxa de Cobertura):** Quantificar, para a amostra fornecida, a percentagem de candidatos elegíveis para pelo menos um apoio habitacional e caracterizar os perfis "excluídos", até ao final do semestre.
 3.  **Objetivo 3 (Tipologia Familiar):** Identificar se as tipologias habitacionais disponíveis (T0-T4) são adequadas à dimensão dos agregados familiares candidatos da amostra.
 
-### ✅ (Checklist SMART)
+### ✅ Auto-Correção (Checklist SMART)
 - [x] **S (Específico):** O que vamos prever/analisar está claro? (Sim: Elegibilidade aos programas baseada em regras oficiais).
 - [x] **M (Mensurável):** Definimos uma métrica? (Sim: Taxa de Cobertura e Precisão das regras).
 - [x] **A (Atingível):** O nosso dataset permite isto? (Sim: Temos rendimentos, idade e agregado).
 - [x] **R (Relevante):** Este objetivo é central para o tema? (Sim: Responde à crise habitacional).
-- [x] **T (Temporal):** Está associado a um Milestone/Data? (Sim: Prazos definidos para M3).
+- [x] **T (Temporal):** Está associado a um Milestone/Data? (Sim: Prazos definidos — entrega M1 até 26/02/2026).
 
 ## 3. Perguntas de Investigação (Data Science Questions)
 Estas são as **3 perguntas** principais que os dados deverão responder ao longo do projeto:
@@ -33,28 +33,25 @@ Estas são as **3 perguntas** principais que os dados deverão responder ao long
 3.  **Existe uma sobreposição significativa entre os públicos-alvo dos diferentes programas, ou eles servem segmentos distintos da população (Jovens vs. Famílias)?**
     *   *Variáveis:* Cruzamento entre os resultados de elegibilidade dos vários programas.
 
-
-
 ## 4. Metodologia de Gestão
 O projeto seguirá o ciclo CRISP-DM, com as decisões documentadas no GitHub.
 *   **Controlo de Versões:** Git Flow simplificado (`main` para entregas, `dev` para trabalho).
-*   **Documentação:** Pasta `docs/` atualizada a cada Milestone.
+*   **Documentação:** Pasta `milestones/` atualizada a cada Milestone.
 
-### Divisão de Papéis (Preliminar)
-*   **Membro 1:** Afonso Nunes - Gestão do Repositório e Integração de Código.
-*   **Membro 2:** Duarte Ribeiro - Responsável pela recolha e validação das Regras de Negócio (Legislação).
-*   **Membro 3:** Guilherme Ventura - Responsável pela Análise Exploratória de Dados (EDA) e Visualização.
+### Divisão de Papéis
+*   **Afonso Nunes** — Gestão do Repositório e Integração de Código.
+*   **Duarte Ribeiro** — Responsável pela recolha e validação das Regras de Negócio (Legislação).
+*   **Guilherme Ventura** — Responsável pela Análise Exploratória de Dados (EDA) e Visualização.
 
 ### Ferramentas e Tecnologias
-Para a implementação destes objetivos, utilizaremos a seguinte stack tecnológica baseada em Python:
 *   **Pandas:** Manipulação e limpeza dos dados tabulares (DataFrames).
 *   **Matplotlib / Seaborn:** Criação de gráficos estáticos para relatórios e análise exploratória.
-*   **OpenPyXL:** Leitura e escrita avançada de ficheiros Excel (essencial para lidar com o formato original dos dados da CML).
-*   **Jupyter Notebooks:** Ambiente de desenvolvimento interativo para prototipagem rápida e documentação de código.
+*   **OpenPyXL:** Leitura e escrita avançada de ficheiros Excel.
+*   **Jupyter Notebooks:** Ambiente de desenvolvimento interativo.
 *   **Git / GitHub:** Controlo de versões e gestão de projeto (Issues/Projects).
 
 ## 5. Análise de Viabilidade dos Dados (Data Understanding)
-- **Fonte:** Dataset `amostras_desafio.xlsx` (anonimizado, fornecido pela CML).
+- **Fonte:** Dataset `amostras_desafio.xlsx` (anonimizado, fornecido pela CML via LxDataLab).
 - **Volume:** ~100 registos iniciais (amostra representativa).
 - **Todas as Variáveis do Dataset:**
 
@@ -69,13 +66,13 @@ Para a implementação destes objetivos, utilizaremos a seguinte stack tecnológ
 | `Concelho` | `concelho` | Município de residência do candidato | **Alta** — define elegibilidade geográfica (Lisboa vs. AML) |
 | `Rendimento Global (IRS e Rend. Isentos)` | `rendimento_anual_bruto` | Rendimento anual bruto do agregado (€) | **Alta** — base para o cálculo da Taxa de Esforço e limites de elegibilidade |
 
-## 6. Cronograma Estimado
+## 6. Cronograma Estimado (CRISP-DM)
 | Fase | Prazo | Entregável |
 | :--- | :--- | :--- |
-| **M1: Iniciação** | 24 Fev | Definição de Regras e Setup do Repo. |
+| **M1: Iniciação** | 26 Fev 2026 | Definição de Regras e Setup do Repo. |
 | **M2: Exploração** | TBD (Março) | Limpeza de Dados e EDA (Notebooks). |
 | **M3: Modelação** | TBD (Abril) | Motor de Regras e Classificação de Elegibilidade. |
 | **M4: Finalização**| TBD (Maio) | Dashboard e Relatório Final. |
 
 ---
-*Data de última atualização: 18/02/2026*
+*Data de última atualização: 20/02/2026*
