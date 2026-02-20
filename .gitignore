@@ -6,9 +6,16 @@
 *.sql
 *.db
 
-# Manter estrutura das pastas de dados
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# --- PASTAS LOCAIS (não partilhar no GitHub) ---
+data/
+notebooks/
+src/
+venv/
+requirements.txt
+resumoM1.md
+
+# --- MILESTONES AUXILIARES (documento interno) ---
+milestones/regras_programas_oficiais.md
 
 # --- KAGGLE ESPECÍFICO ---
 .kaggle/
@@ -19,7 +26,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 .venv/
-venv/
 env/
 
 # --- JUPYTER & NOTEBOOKS ---
@@ -28,7 +34,6 @@ env/
 
 # --- DOCUMENTOS LOCAIS (não partilhar) ---
 *.pdf
-resumoM1.md
 read_pdf.py
 
 # --- SISTEMA & IDEs ---
