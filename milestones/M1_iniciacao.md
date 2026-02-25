@@ -29,7 +29,7 @@ A crise habitacional em Lisboa afeta tanto jovens como famílias de classe médi
 
 * **Divisão de Tarefas:**
   * **Afonso Nunes:** Gestão do Repositório, Integração de Código e Coordenação.
-  * **Duarte Ribeiro:** Responsável pela recolha e validação das Regras de Negócio (Legislação).
+  * **Duarte Ribeiro:** Responsável pelas regras de legislação e escrita do código que calcula automaticamente a elegibilidade dos candidatos.
   * **Guilherme Ventura:** Responsável pela Análise Exploratória de Dados (EDA) e Visualização.
 * **Ferramentas de Colaboração:** GitHub Projects para Kanban, reuniões semanais via Discord.
 
