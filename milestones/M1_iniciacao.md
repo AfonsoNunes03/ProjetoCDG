@@ -8,7 +8,7 @@ A crise habitacional em Lisboa afeta tanto jovens como famílias de classe médi
 * **Problema Identificado:** Os programas de apoio existem, mas as suas regras de elegibilidade — rendimentos máximos, taxas de esforço, limites de idade, restrições geográficas — criam um **funil burocrático tão apertado** que uma parte significativa das pessoas que *precisam* de apoio fica automaticamente excluída, não por falta de necessidade, mas por excesso de burocracia ou por estar numa "zona cinzenta" de rendimentos.
 
 ### Pergunta Central do Projeto:
-> **"Dada uma amostra de candidatos residentes (ou aspirantes a residentes) em Lisboa, qual a taxa de cobertura real dos atuais programas de apoio habitacional?"**
+> **"Dada a amostra de candidatos na plataforma municipal, qual a taxa de cobertura real dos atuais programas de apoio habitacional e qual o perfil socioeconómico dos agregados que ficam excluídos?"**
 
 ## 2. Objetivos SMART
 
