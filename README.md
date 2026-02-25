@@ -23,11 +23,11 @@ Este repositório funciona como uma **Wiki de Projeto**, documentando as decisõ
 
 ### Contexto e Problema de Negócio
 
-A crise habitacional em Lisboa é amplamente conhecida. Contudo, a verdadeira questão não é apenas o custo da habitação — é saber **quantas pessoas que precisam de apoio conseguem efetivamente aceder aos programas existentes**.
+A crise habitacional em Lisboa é amplamente conhecida. Contudo, a verdadeira questão analítica não é apenas o custo da habitação no mercado livre — é perceber quantas das pessoas que procuram apoio conseguem, efetivamente, enquadrar-se nos programas públicos existentes.
 
-Os programas de apoio habitacional (Porta 65 Jovem, Programa Renda Acessível, SMAA) existem, mas as suas regras de elegibilidade criam um **funil burocrático** que exclui uma parte significativa dos candidatos que mais precisam de ajuda.
+Embora existam várias respostas habitacionais (Porta 65 Jovem, Programa Renda Acessível, SMAA), os seus critérios de elegibilidade são estritos. O grande problema de negócio reside em compreender se estas regras atuam como um filtro justo ou se, pelo contrário, criam um desfasamento que acaba por excluir uma parte significativa dos requerentes em situação de vulnerabilidade.
 
-O projeto analisa o "Acesso Económico à Habitação no Concelho de Lisboa" através da exploração de dados reais da plataforma municipal "Habitar Lisboa". O objetivo central é traçar o perfil socioeconómico das famílias que procuram apoio e cruzar essa caracterização com os critérios de elegibilidade do Regulamento Municipal.
+Para dar resposta a este problema, o presente projeto analisa o "Acesso Económico à Habitação no Concelho de Lisboa" através da exploração de dados reais da plataforma municipal "Habitar Lisboa". O objetivo central é traçar o perfil socioeconómico das famílias requerentes e cruzar essa caracterização com os limites legais impostos pelos Regulamentos Municipais e Nacionais, validando a adequação das políticas públicas à realidade demográfica atual.
 
 ### Objetivos do Projeto
 
