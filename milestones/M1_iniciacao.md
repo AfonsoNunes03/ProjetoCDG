@@ -37,7 +37,7 @@ A crise habitacional em Lisboa afeta tanto jovens como famílias de classe médi
 
 ### Fonte e Proveniência
 * **Origem:** Dataset `amostras_desafio.xlsx` (anonimizado, fornecido pela CML via LxDataLab).
-* **Período de Extração:** Dados disponibilizados no 1º semestre de 2025/2026.
+* **Período de Extração:** Dados disponibilizados de Janeiro 2023 até Outubro 2024.
 * **Disponibilidade:** Dados descarregados e armazenados localmente (protegidos pelo `.gitignore`).
 * **Qualidade Inicial:** Existem valores nulos em algumas colunas e os escalões etários estão em formato categórico, necessitando conversão na M2.
 * **Ética:** Os dados cumprem o RGPD — estão anonimizados (sem nomes, moradas ou NIFs).
