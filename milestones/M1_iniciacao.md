@@ -14,9 +14,9 @@ A crise habitacional em Lisboa afeta tanto jovens como famílias de classe médi
 
 *Objetivos definidos seguindo a lógica SMART (Específico, Mensurável, Atingível, Relevante e Temporal):*
 
-1. **Objetivo 1 (Mapeamento de Regras):** Desenvolver um algoritmo capaz de replicar as regras de acesso dos 3 principais programas (Porta 65, PRA, SMAA) com 95% de precisão face à legislação, até à Milestone 3.
+1. **Objetivo 1 (Mapeamento de Regras):** Desenvolver um algoritmo em Python capaz de mapear e aplicar os critérios quantitativos dos 3 principais programas (Porta 65, PRA, SMAA) para todos registos válidos da amostra, até à Milestone 3.
 2. **Objetivo 2 (Taxa de Cobertura):** Quantificar, para a amostra fornecida, a percentagem de candidatos elegíveis para pelo menos um apoio habitacional e caracterizar os perfis "excluídos", até ao final do semestre.
-3. **Objetivo 3 (Tipologia Familiar):** Identificar se as tipologias habitacionais disponíveis (T0–T4) são adequadas à dimensão dos agregados familiares candidatos da amostra.
+3. **Objetivo 3 (Tipologia Familiar):** Quantificar a necessidade de tipologias (T0 a T4) com base na dimensão dos agregados familiares da amostra, comparando essa distribuição percentual para avaliar a adequação da procura, até à Milestone 3.
 
 ### ✅ Auto-Correção (Checklist SMART)
 - [x] **S (Específico):** O que vamos prever/analisar está claro? → Sim: Elegibilidade aos programas baseada em regras oficiais.
