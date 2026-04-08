@@ -9,33 +9,27 @@
 
 ---
 
-## 📂 Organização do Portfólio de Resultados
+## Organização do Portfólio de Resultados
 
 Este repositório funciona como uma **Wiki de Projeto**, documentando as decisões e resultados sem exposição de dados sensíveis ou código proprietário:
 
-* **`milestones/`**: Documentação técnica detalhada de cada etapa do projeto.
-* **`assets/`**: Repositório de evidências visuais, dividido em `graficos/`, `diagramas/` e `demos/`.
-* **`.gitignore`**: Filtro de segurança que impede a submissão acidental de dados brutos ou scripts.
+* **`milestones/`** — Documentação técnica detalhada de cada etapa do projeto
+* **`assets/graficos/`** — Evidências visuais: gráficos EDA, resultados do modelo, funil de elegibilidade
+* **`.gitignore`** — Filtro de segurança que impede submissão de dados brutos ou scripts
 
 ---
 
 ## 1. Iniciação (Milestone 1)
 
-### Contexto e Problema de Negócio
+### Questão de Investigação
 
-A crise habitacional em Lisboa é amplamente conhecida. Contudo, a verdadeira questão não é apenas o custo da habitação — é saber **quantas pessoas que precisam de apoio conseguem efetivamente aceder aos programas existentes**.
+> *"Desenvolver um modelo de classificação supervisionado que, utilizando os dados socioeconómicos da Plataforma Habitar Lisboa, seja capaz de prever a elegibilidade dos candidatos aos programas municipais com um F1-Score superior a 80%, identificando simultaneamente a importância das variáveis na exclusão dos candidatos."*
 
-Os programas de apoio habitacional (Porta 65 Jovem, Programa Renda Acessível, SMAA) existem, mas as suas regras de elegibilidade criam um **funil burocrático** que exclui uma parte significativa dos candidatos que mais precisam de ajuda.
+### Contexto e Problema
 
-O projeto analisa o "Acesso Económico à Habitação no Concelho de Lisboa" através da exploração de dados reais da plataforma municipal "Habitar Lisboa". O objetivo central é traçar o perfil socioeconómico das famílias que procuram apoio e cruzar essa caracterização com os critérios de elegibilidade do Regulamento Municipal.
+A crise habitacional em Lisboa levanta uma questão crítica: quantos candidatos registados na Plataforma Habitar Lisboa são formalmente elegíveis para os programas de apoio existentes? O projeto analisa dados reais da plataforma municipal e cruza os perfis socioeconómicos com os critérios legais de elegibilidade de 4 programas (Porta 65 Jovem, PRA, SMAA e PAA).
 
-### Objetivos do Projeto
-
-* **Objetivo 1:** Desenvolver um algoritmo que replique as regras de acesso dos 3 principais programas (Porta 65, PRA, SMAA) com 95% de precisão face à legislação, até à Milestone 3.
-* **Objetivo 2:** Quantificar a percentagem de candidatos elegíveis para pelo menos um apoio e caracterizar os perfis "excluídos", até ao final do semestre.
-* **Objetivo 3:** Identificar se as tipologias habitacionais disponíveis são adequadas à dimensão dos agregados familiares da amostra.
-
-👉 **[Consulta a Documentação Completa do Milestone 1](milestones/M1_iniciacao.md)**
+👉 **[Documentação completa — Milestone 1](milestones/M1_iniciacao.md)**
 
 ---
 
@@ -43,26 +37,46 @@ O projeto analisa o "Acesso Económico à Habitação no Concelho de Lisboa" atr
 
 ### Principais Conclusões (EDA)
 
-> *Dica: Insere aqui o gráfico mais importante do projeto que resume a tua descoberta principal.*
-> ![Gráfico de Destaque](assets/graficos/insight_principal.png)
+![Comparativo de Rendimentos](assets/graficos/f2_comparativo_rendimentos.png)
 
-* **Conclusão Chave:** *[A preencher na Milestone 2]*
+* **Rendimento médio candidatos PHL (Lisboa):** 16.376 €/ano (mediana: 13.818 €)
+* **Rendimento médio beneficiários reais:** SMAA 16.511€ | PRA 17.157€ | PAA 3.065€
+* **61%** dos candidatos residem no concelho de Lisboa (6.291 de 10.279)
+* **77.6%** dos agregados têm 1–2 pessoas
+* Os perfis socioeconómicos de candidatos e beneficiários são **estatisticamente semelhantes** — a exclusão não é por falta de adequação do perfil
 
-👉 **[Consulta a Documentação Completa do Milestone 2](milestones/M2_exploracao.md)**
+👉 **[Documentação completa — Milestone 2](milestones/M2_exploracao.md)**
 
 ---
 
 ## 3. Modelação (Milestone 3)
 
-### Desempenho do Modelo
+### Motor de Regras + Machine Learning
 
-| Modelo | Métrica Principal | Resultado |
-| :--- | :--- | :--- |
-| *[A preencher]* | *[A preencher]* | *[A preencher]* |
+![Funil de Elegibilidade](assets/graficos/f3_funil_elegibilidade_motor.png)
 
-* **Nota:** *[A preencher na Milestone 3]*
+#### Taxa de Cobertura Formal
 
-👉 **[Consulta a Documentação Completa do Milestone 3](milestones/M3_modelacao.md)**
+| Programa | Elegíveis | % Candidatos |
+|:---|:---:|:---:|
+| Porta 65 Jovem | 2.631 | 41.8% |
+| PRA — Renda Acessível | 4.441 | 70.6% |
+| SMAA (limite superior) | 6.145 | 97.7% |
+| PAA — Arrendamento Apoiado | 1.704 | 27.1% |
+| **Elegíveis em ≥ 1 programa** | **6.171** | **98.1%** |
+
+#### Modelo de Machine Learning (Árvore de Decisão)
+
+| Métrica | Resultado |
+|:---|:---:|
+| Accuracy (teste 20%) | 99.2% |
+| F1-score | 99.6% |
+| Recall (elegíveis) | 99.6% |
+| Feature importance: rendimento | 93.9% |
+
+A árvore de decisão, sem acesso à legislação, convergiu automaticamente para os mesmos limiares que a lei define (35.000€ e 45.000€).
+
+👉 **[Documentação completa — Milestone 3](milestones/M3_modelacao.md)**
 
 ---
 
@@ -70,25 +84,27 @@ O projeto analisa o "Acesso Económico à Habitação no Concelho de Lisboa" atr
 
 ### Resposta ao Problema
 
-*[Explicar como os resultados obtidos respondem à pergunta inicial da Milestone 1. Qual o impacto prático desta solução?]*
+**A taxa de cobertura formal é de 98.1%.** Quase todos os candidatos PHL satisfazem os critérios de rendimento e idade dos programas existentes. A exclusão real não é causada por falta de elegibilidade formal — é causada por **critérios não observáveis e pela capacidade finita dos programas** (oferta insuficiente face à procura).
 
-### Recomendações e Inovação
+O funil burocrático não opera ao nível da triagem formal. Opera ao nível da **seleção entre elegíveis**.
 
-1. *[A preencher na Milestone 4]*
+### Recomendações
 
-👉 **[Consulta a Documentação Completa do Milestone 4](milestones/M4_finalizacao.md)**
+1. Aumentar a oferta habitacional disponível nos programas — não restringir os critérios
+2. Priorizar o SMAA e o PRA, que cobrem a maior parte dos candidatos de classe média
+3. Monitorizar a taxa de esforço real dos candidatos para melhorar a triagem SMAA
+
+👉 **[Documentação completa — Milestone 4](milestones/M4_finalizacao.md)** *(em curso)*
 
 ---
 
-**Instituição:** Coimbra Business School | ISCAC  
-**Curso:** Licenciatura em Ciência de Dados para a Gestão  
-**Unidade Curricular:** Projeto em Ciência de Dados  
+**Instituição:** Coimbra Business School | ISCAC
+**Curso:** Licenciatura em Ciência de Dados para a Gestão
+**Unidade Curricular:** Projeto em Ciência de Dados
 **Professor Responsável:** Dora Melo (dmelo@iscac.pt)
 
-## ⚠ Nota de Confidencialidade
+---
 
-Este repositório foi construído exclusivamente para fins de **portfólio e documentação de resultados**. Por questões de proteção de dados e propriedade intelectual, este repositório **não contém**:
+## Nota de Confidencialidade
 
-1. Dados brutos (datasets originais).
-2. Código-fonte proprietário da implementação.
-3. Informação sensível de clientes ou parceiros.
+Este repositório contém exclusivamente documentação de resultados e evidências visuais. Não contém dados brutos, código-fonte ou informação sensível dos candidatos.
