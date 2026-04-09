@@ -17,7 +17,7 @@
 |:---|:---|
 | **S — Específico** | Criar um classificador supervisionado para prever elegibilidade (Elegível/Inelegível) sem que o modelo conheça as regras a priori. |
 | **M — Mensurável** | Atingir uma performance mínima de **80% de F1-Score/Recall** no conjunto de teste. |
-| **A — Atingível** | Utilização de variáveis críticas (Rendimento, Idade, Agregado) e Ground Truth gerado pelo Motor de Regras (Oracle). |
+| **A — Atingível** | Utilização de variáveis críticas (Rendimento, Idade, Agregado) e Ground Truth gerado pelo Motor de Regras. |
 | **R — Relevante** | Automatização da triagem municipal e identificação das variáveis que mais pesam no "funil burocrático". |
 | **T — Temporal** | Cronograma de entrega final para a Milestone 4 em maio de 2026. |
 
