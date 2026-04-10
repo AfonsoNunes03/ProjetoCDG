@@ -22,8 +22,9 @@
 
 ## 1. Objetivos da Fase
 
-1. **Motor de Regras Determinístico** — aplicar as regras oficiais de elegibilidade dos 4 programas a cada candidato PHL e calcular a taxa de cobertura formal
-2. **Modelo de Machine Learning (Árvore de Decisão)** — treinar um classificador supervisionado que aprenda as fronteiras de decisão e comparar as regras aprendidas com a legislação
+1.  **Construção da variavel objetivo** - O valor da variavel para cada observação é o resultado de ser elegivel ou não de acordo com as regras oficiais
+2.  **Motor de Regras Determinístico** — aplicar as regras oficiais de elegibilidade dos 4 programas a cada candidato PHL e calcular a taxa de cobertura formal
+3. **Modelo de Machine Learning (Árvore de Decisão)** — treinar um classificador supervisionado que aprenda as fronteiras de decisão e comparar as regras aprendidas com a legislação
 
 ---
 
