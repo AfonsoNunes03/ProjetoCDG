@@ -15,7 +15,7 @@
 
 | Critério SMART | Descrição e Cumprimento |
 |:---|:---|
-| **S — Específico** | Criar um classificador supervisionado para prever elegibilidade (Elegível/Inelegível) sem que o modelo conheça as regras a priori. |
+| **S — Específico** | Criar um classificador para prever elegibilidade (Elegível/Inelegível) sem que o modelo conheça as regras a priori. |
 | **M — Mensurável** | Atingir uma performance mínima de **80% de F1-Score/Recall** no conjunto de teste. |
 | **A — Atingível** | Utilização de variáveis críticas (Rendimento, Idade, Agregado) e Ground Truth gerado pelo Motor de Regras. |
 | **R — Relevante** | Automatização da triagem municipal e identificação das variáveis que mais pesam no "funil burocrático". |
@@ -26,7 +26,7 @@
 ## 3. Perguntas de Investigação
 
 1. **Classificação:** É possível treinar um modelo supervisionado que aprenda as fronteiras de elegibilidade legislativa com um erro inferior a 20%?
-2. **Importância das Variáveis:** Quais as características (características do agregado) que apresentam maior peso estatístico na decisão de elegibilidade?
+2. **Importância das Variáveis:** Quais as características (características do agregado) que apresentam maior influencia na decisão de elegibilidade?
 3. **Métricas:** Qual o desempenho do modelo em termos de F1-Score e Recall para garantir que o sistema identifica o maior número de elegíveis possível?
 4. **Generalização:** O modelo consegue classificar corretamente um "novo candidato" (automação) mantendo a estabilidade via Cross-Validation?
 
