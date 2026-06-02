@@ -1,110 +1,175 @@
-# Desafio Habitação Lisboa: Análise de Elegibilidade aos Programas de Apoio
+# Desafio Habitação Lisboa — Projeto Académico de Ciência de Dados
 
-## Identificação da Equipa
-* **Grupo nº:** 2
-* **Membros:**
-  * Afonso Nunes - 2023141213
-  * Duarte Ribeiro - 2023142440
-  * Guilherme Ventura - 2023132296
+Este repositório contém uma versão pública e limitada da documentação do projeto **Desafio Habitação Lisboa**, desenvolvido em contexto académico no âmbito da Licenciatura em **Ciência de Dados para a Gestão** na Coimbra Business School | ISCAC.
+
+Por motivos de **confidencialidade, proteção de dados e responsabilidade ética**, este repositório **não inclui os dados originais, o código completo nem outputs sensíveis** utilizados no desenvolvimento do projeto.
 
 ---
 
-## Organização do Portfólio de Resultados
+## Objetivo do projeto
 
-Este repositório funciona como uma **Wiki de Projeto**, documentando as decisões e resultados sem exposição de dados sensíveis ou código proprietário:
+O objetivo do projeto foi aplicar técnicas de **Ciência de Dados** à análise de elegibilidade de candidatos a programas municipais de apoio à habitação, explorando fatores socioeconómicos e critérios associados ao processo de candidatura.
 
-* **`milestones/`** — Documentação técnica detalhada de cada etapa do projeto
-* **`assets/graficos/`** — Evidências visuais: gráficos EDA, resultados do modelo, funil de elegibilidade
-* **`.gitignore`** — Filtro de segurança que impede submissão de dados brutos ou scripts
+O trabalho procurou responder a questões como:
 
----
-
-## 1. Iniciação (Milestone 1)
-
-### Questão de Investigação
-
-> *"Desenvolver um modelo de classificação supervisionado que, utilizando os dados socioeconómicos da Plataforma Habitar Lisboa, seja capaz de prever a elegibilidade dos candidatos aos programas municipais com um F1-Score superior a 80%, identificando simultaneamente a importância das variáveis na exclusão dos candidatos."*
-
-### Contexto e Problema
-
-A crise habitacional em Lisboa levanta uma questão crítica: quantos candidatos registados na Plataforma Habitar Lisboa são formalmente elegíveis para os programas de apoio existentes? O projeto analisa dados reais da plataforma municipal e cruza os perfis socioeconómicos com os critérios legais de elegibilidade de 4 programas (Porta 65 Jovem, PRA, SMAA e PAA).
-
-👉 **[Documentação completa — Milestone 1](milestones/M1_iniciacao.md)**
+* Que variáveis podem estar associadas à elegibilidade dos candidatos?
+* Como podem técnicas de análise de dados apoiar a interpretação de processos de candidatura?
+* De que forma modelos supervisionados podem ser utilizados para apoiar decisões em contextos sociais e administrativos?
 
 ---
 
-## 2. Exploração (Milestone 2)
+## Contexto
 
-### Principais Conclusões (EDA)
+O projeto foi desenvolvido com dados reais ou sensíveis associados ao domínio da habitação, o que exigiu cuidados adicionais relacionados com:
 
-![Comparativo de Rendimentos](assets/graficos/f2_comparativo_rendimentos.png)
+* confidencialidade;
+* proteção de dados;
+* tratamento responsável de informação sensível;
+* não divulgação de dados individuais;
+* não publicação de código ou outputs que pudessem permitir reconstruir informação privada.
 
-* **Rendimento médio candidatos PHL (Lisboa):** 16.376 €/ano (mediana: 13.818 €)
-* **Rendimento médio beneficiários reais:** SMAA 16.511€ | PRA 17.157€ | PAA 3.065€
-* **61%** dos candidatos residem no concelho de Lisboa (6.291 de 10.279)
-* **77.6%** dos agregados têm 1–2 pessoas
-* Os perfis socioeconómicos de candidatos e beneficiários são **estatisticamente semelhantes** — a exclusão não é por falta de adequação do perfil
-
-👉 **[Documentação completa — Milestone 2](milestones/M2_exploracao.md)**
+Por esse motivo, este repositório serve apenas como **documentação pública do projeto**, e não como versão integralmente reproduzível.
 
 ---
 
-## 3. Modelação (Milestone 3)
+## Tecnologias e ferramentas utilizadas
 
-### Motor de Regras + Machine Learning
+Durante o desenvolvimento do projeto foram utilizadas ferramentas e técnicas associadas a Ciência de Dados, nomeadamente:
 
-![Funil de Elegibilidade](assets/graficos/f3_funil_elegibilidade_motor.png)
-
-#### Taxa de Cobertura Formal
-
-| Programa | Elegíveis | % Candidatos |
-|:---|:---:|:---:|
-| Porta 65 Jovem | 2.631 | 41.8% |
-| PRA — Renda Acessível | 4.441 | 70.6% |
-| SMAA (limite superior) | 6.145 | 97.7% |
-| PAA — Arrendamento Apoiado | 1.704 | 27.1% |
-| **Elegíveis em ≥ 1 programa** | **6.171** | **98.1%** |
-
-#### Modelo de Machine Learning (Árvore de Decisão)
-
-| Métrica | Resultado |
-|:---|:---:|
-| Accuracy (teste 20%) | 99.2% |
-| F1-score | 99.6% |
-| Recall (elegíveis) | 99.6% |
-| Feature importance: rendimento | 93.9% |
-
-A árvore de decisão, sem acesso à legislação, convergiu automaticamente para os mesmos limiares que a lei define (35.000€ e 45.000€).
-
-👉 **[Documentação completa — Milestone 3](milestones/M3_modelacao.md)**
+* Python
+* Jupyter Notebook
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib / Seaborn
+* Análise exploratória de dados
+* Preparação e transformação de variáveis
+* Modelos de classificação supervisionada
+* Avaliação de modelos com métricas como accuracy, recall, precision e F1-score
 
 ---
 
-## 4. Finalização (Milestone 4)
+## Metodologia geral
 
-### Resposta ao Problema
+A abordagem seguida no projeto incluiu as seguintes etapas:
 
-**A taxa de cobertura formal é de 98.1%.** Quase todos os candidatos PHL satisfazem os critérios de rendimento e idade dos programas existentes. A exclusão real não é causada por falta de elegibilidade formal — é causada por **critérios não observáveis e pela capacidade finita dos programas** (oferta insuficiente face à procura).
+1. **Compreensão do problema**
 
-O funil burocrático não opera ao nível da triagem formal. Opera ao nível da **seleção entre elegíveis**.
+   * Análise do contexto dos programas de apoio à habitação.
+   * Identificação dos objetivos analíticos do projeto.
+   * Definição das perguntas de investigação.
 
-### Recomendações
+2. **Preparação dos dados**
 
-1. Aumentar a oferta habitacional disponível nos programas — não restringir os critérios
-2. Priorizar o SMAA e o PRA, que cobrem a maior parte dos candidatos de classe média
-3. Monitorizar a taxa de esforço real dos candidatos para melhorar a triagem SMAA
+   * Limpeza e tratamento de dados.
+   * Análise de valores em falta.
+   * Transformação de variáveis.
+   * Preparação do conjunto de dados para análise e modelação.
 
-👉 **[Documentação completa — Milestone 4](milestones/M4_finalizacao.md)** *(em curso)*
+3. **Análise exploratória de dados**
+
+   * Estudo da distribuição das variáveis.
+   * Identificação de padrões relevantes.
+   * Análise de relações entre variáveis socioeconómicas e critérios de elegibilidade.
+
+4. **Modelação**
+
+   * Aplicação de modelos de classificação supervisionada.
+   * Comparação de desempenho entre abordagens.
+   * Avaliação dos modelos com métricas adequadas ao problema.
+
+5. **Interpretação dos resultados**
+
+   * Análise das variáveis com maior impacto.
+   * Discussão dos resultados obtidos.
+   * Reflexão sobre limitações, riscos e cuidados na aplicação de modelos em contextos sociais.
+
+6. **Documentação e apresentação**
+
+   * Organização dos resultados.
+   * Preparação da apresentação final.
+   * Comunicação das principais conclusões de forma clara e responsável.
 
 ---
 
-**Instituição:** Coimbra Business School | ISCAC
-**Curso:** Licenciatura em Ciência de Dados para a Gestão
-**Unidade Curricular:** Projeto em Ciência de Dados
-**Professor Responsável:** Dora Melo (dmelo@iscac.pt)
+## O que está disponível neste repositório
+
+Este repositório pode incluir:
+
+* descrição geral do projeto;
+* enquadramento do problema;
+* metodologia utilizada;
+* estrutura conceptual da análise;
+* documentação não sensível;
+* reflexões sobre o processo de desenvolvimento;
+* eventuais gráficos, exemplos ou outputs anonimizados, caso aplicável.
 
 ---
 
-## Nota de Confidencialidade
+## O que não está disponível
 
-Este repositório contém exclusivamente documentação de resultados e evidências visuais. Não contém dados brutos, código-fonte ou informação sensível dos candidatos.
+Por motivos de confidencialidade, este repositório **não inclui**:
+
+* dados originais;
+* dados pessoais ou sensíveis;
+* código completo do projeto;
+* notebooks com acesso a informação confidencial;
+* outputs que permitam reconstruir os dados;
+* documentação interna não autorizada;
+* ficheiros ou resultados que possam comprometer a privacidade dos envolvidos.
+
+---
+
+## Principais competências desenvolvidas
+
+Este projeto permitiu desenvolver competências em:
+
+* análise exploratória de dados;
+* preparação e limpeza de dados;
+* modelação supervisionada;
+* avaliação de modelos de classificação;
+* interpretação de resultados;
+* comunicação de conclusões analíticas;
+* trabalho em equipa;
+* documentação técnica;
+* responsabilidade ética no uso de dados;
+* proteção de dados e confidencialidade.
+
+---
+
+## Limitações
+
+Este repositório não deve ser interpretado como uma versão completa ou reproduzível do projeto original.
+
+A ausência dos dados e do código completo resulta de uma decisão deliberada de proteção de informação sensível e de respeito pelos princípios de privacidade e confidencialidade.
+
+---
+
+## Possível evolução futura
+
+Uma evolução futura deste projeto poderá passar pela criação de uma versão demonstrativa com:
+
+* dados sintéticos;
+* dados públicos;
+* notebooks totalmente reproduzíveis;
+* dashboard interativo;
+* pipeline completo de análise;
+* documentação técnica aberta.
+
+Essa versão permitiria demonstrar a metodologia utilizada sem comprometer dados sensíveis ou informação confidencial.
+
+---
+
+## Autores
+
+**Afonso Nunes**
+**Duarte Ribeiro**
+**Guilherme Ventura**
+
+## Orientadora
+
+**Dora Melo**
+Licenciado em Ciência de Dados para a Gestão
+Coimbra Business School | ISCAC
+
+Interesses: Ciência de Dados, Inteligência Artificial, IA Generativa, Apoio à Decisão, Análise de Risco e Automação de Processos Empresariais.
