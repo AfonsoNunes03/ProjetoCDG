@@ -1,175 +1,192 @@
-# Desafio Habitação Lisboa — Projeto Académico de Ciência de Dados
+# Desafio Habitação Lisboa — Análise de Elegibilidade aos Programas de Apoio
 
-Este repositório contém uma versão pública e limitada da documentação do projeto **Desafio Habitação Lisboa**, desenvolvido em contexto académico no âmbito da Licenciatura em **Ciência de Dados para a Gestão** na Coimbra Business School | ISCAC.
+> **Nota de confidencialidade:** Este repositório contém apenas documentação pública e evidências não sensíveis de um projeto académico de Ciência de Dados. Por motivos de confidencialidade, proteção de dados e responsabilidade ética, os dados originais, o código completo e quaisquer outputs sensíveis não são disponibilizados.
 
-Por motivos de **confidencialidade, proteção de dados e responsabilidade ética**, este repositório **não inclui os dados originais, o código completo nem outputs sensíveis** utilizados no desenvolvimento do projeto.
+## Sobre o projeto
 
----
+O **Desafio Habitação Lisboa** foi desenvolvido em contexto académico no âmbito da Licenciatura em **Ciência de Dados para a Gestão**, na **Coimbra Business School | ISCAC**.
 
-## Objetivo do projeto
+O projeto teve como objetivo aplicar técnicas de **Ciência de Dados** à análise de elegibilidade de candidatos a programas municipais de apoio à habitação, explorando variáveis socioeconómicas, critérios formais de elegibilidade e abordagens de modelação supervisionada.
 
-O objetivo do projeto foi aplicar técnicas de **Ciência de Dados** à análise de elegibilidade de candidatos a programas municipais de apoio à habitação, explorando fatores socioeconómicos e critérios associados ao processo de candidatura.
+Este repositório funciona como uma versão pública e limitada do projeto, focada na documentação metodológica, organização do trabalho e apresentação geral dos resultados de forma não sensível.
 
-O trabalho procurou responder a questões como:
+## Objetivo
+
+O objetivo principal foi estudar de que forma dados socioeconómicos poderiam ser utilizados para apoiar a análise de elegibilidade em programas municipais de habitação.
+
+O projeto procurou responder a questões como:
 
 * Que variáveis podem estar associadas à elegibilidade dos candidatos?
-* Como podem técnicas de análise de dados apoiar a interpretação de processos de candidatura?
-* De que forma modelos supervisionados podem ser utilizados para apoiar decisões em contextos sociais e administrativos?
-
----
+* De que forma critérios formais podem ser traduzidos para uma abordagem analítica?
+* Como podem modelos de classificação supervisionada apoiar a interpretação de processos de candidatura?
+* Que cuidados devem existir ao aplicar Ciência de Dados em contextos sociais e administrativos?
 
 ## Contexto
 
-O projeto foi desenvolvido com dados reais ou sensíveis associados ao domínio da habitação, o que exigiu cuidados adicionais relacionados com:
+A habitação é uma área particularmente sensível, pois envolve informação pessoal, socioeconómica e familiar. Por esse motivo, o projeto exigiu cuidado na forma como os dados foram tratados, analisados e comunicados.
 
-* confidencialidade;
-* proteção de dados;
-* tratamento responsável de informação sensível;
-* não divulgação de dados individuais;
-* não publicação de código ou outputs que pudessem permitir reconstruir informação privada.
+A versão pública deste repositório não tem como objetivo permitir a reprodução integral do projeto original. O objetivo é apresentar a estrutura, a metodologia e as competências desenvolvidas, respeitando os princípios de confidencialidade e proteção de dados.
 
-Por esse motivo, este repositório serve apenas como **documentação pública do projeto**, e não como versão integralmente reproduzível.
+## Equipa
 
----
+Projeto desenvolvido por:
 
-## Tecnologias e ferramentas utilizadas
+* Afonso Nunes
+* Duarte Ribeiro
+* Guilherme Ventura
 
-Durante o desenvolvimento do projeto foram utilizadas ferramentas e técnicas associadas a Ciência de Dados, nomeadamente:
+## Instituição
+
+**Instituição:** Coimbra Business School | ISCAC
+**Curso:** Licenciatura em Ciência de Dados para a Gestão
+**Unidade Curricular:** Projeto em Ciência de Dados
+**Docente responsável:** Dora Melo
+
+## Organização do repositório
+
+```text
+ProjetoCDG/
+│
+├── assets/
+│   └── graficos/
+│       └── Evidências visuais não sensíveis utilizadas na documentação
+│
+├── milestones/
+│   └── Documentação técnica das diferentes fases do projeto
+│
+├── .gitignore
+│   └── Ficheiro de segurança para evitar submissão de dados brutos,
+│       scripts sensíveis ou ficheiros não autorizados
+│
+└── README.md
+    └── Descrição pública do projeto
+```
+
+## Metodologia geral
+
+O projeto foi desenvolvido em várias fases, seguindo uma lógica semelhante a um processo completo de Ciência de Dados.
+
+### 1. Compreensão do problema
+
+Nesta fase foram analisados o contexto do desafio, os objetivos do projeto e as principais questões de investigação.
+
+Foram definidos os limites da análise e identificadas as variáveis potencialmente relevantes para estudar a elegibilidade dos candidatos.
+
+### 2. Preparação dos dados
+
+A preparação dos dados incluiu tarefas como:
+
+* análise da estrutura dos dados;
+* identificação de variáveis relevantes;
+* tratamento de valores em falta;
+* transformação de variáveis;
+* preparação dos dados para análise exploratória e modelação.
+
+Os dados originais não são disponibilizados neste repositório.
+
+### 3. Análise exploratória de dados
+
+A análise exploratória teve como objetivo compreender padrões gerais nos dados, relações entre variáveis e potenciais fatores associados à elegibilidade.
+
+Foram exploradas dimensões como:
+
+* características socioeconómicas;
+* composição do agregado;
+* rendimento;
+* localização;
+* critérios formais associados aos programas de apoio;
+* distribuição geral dos candidatos.
+
+Apenas são disponibilizadas evidências visuais não sensíveis ou documentação geral do processo.
+
+### 4. Modelação
+
+Foram exploradas abordagens de classificação supervisionada para apoiar a análise da elegibilidade formal.
+
+A modelação teve como objetivo avaliar de que forma determinadas variáveis poderiam contribuir para a interpretação de perfis elegíveis e não elegíveis.
+
+Foram consideradas métricas de avaliação como:
+
+* accuracy;
+* precision;
+* recall;
+* F1-score.
+
+Os modelos, código completo e outputs sensíveis não são disponibilizados publicamente.
+
+### 5. Interpretação dos resultados
+
+A análise dos resultados procurou identificar padrões relevantes e compreender o papel de diferentes variáveis na elegibilidade formal.
+
+A interpretação teve em conta não apenas a performance dos modelos, mas também os limites éticos e práticos da aplicação de algoritmos em contextos sociais.
+
+### 6. Documentação e comunicação
+
+O projeto foi organizado por milestones, permitindo documentar a evolução do trabalho, as decisões tomadas e as conclusões principais.
+
+A comunicação dos resultados foi feita com preocupação em clareza, responsabilidade e proteção de informação sensível.
+
+## Ferramentas e tecnologias utilizadas
+
+Durante o projeto foram utilizadas ferramentas e técnicas associadas a Ciência de Dados, nomeadamente:
 
 * Python
 * Jupyter Notebook
 * Pandas
 * NumPy
 * Scikit-learn
-* Matplotlib / Seaborn
+* Matplotlib
+* Seaborn
 * Análise exploratória de dados
 * Preparação e transformação de variáveis
 * Modelos de classificação supervisionada
-* Avaliação de modelos com métricas como accuracy, recall, precision e F1-score
+* Avaliação de modelos
+* Documentação técnica
 
----
+## Competências desenvolvidas
 
-## Metodologia geral
+Este projeto permitiu desenvolver competências em:
 
-A abordagem seguida no projeto incluiu as seguintes etapas:
-
-1. **Compreensão do problema**
-
-   * Análise do contexto dos programas de apoio à habitação.
-   * Identificação dos objetivos analíticos do projeto.
-   * Definição das perguntas de investigação.
-
-2. **Preparação dos dados**
-
-   * Limpeza e tratamento de dados.
-   * Análise de valores em falta.
-   * Transformação de variáveis.
-   * Preparação do conjunto de dados para análise e modelação.
-
-3. **Análise exploratória de dados**
-
-   * Estudo da distribuição das variáveis.
-   * Identificação de padrões relevantes.
-   * Análise de relações entre variáveis socioeconómicas e critérios de elegibilidade.
-
-4. **Modelação**
-
-   * Aplicação de modelos de classificação supervisionada.
-   * Comparação de desempenho entre abordagens.
-   * Avaliação dos modelos com métricas adequadas ao problema.
-
-5. **Interpretação dos resultados**
-
-   * Análise das variáveis com maior impacto.
-   * Discussão dos resultados obtidos.
-   * Reflexão sobre limitações, riscos e cuidados na aplicação de modelos em contextos sociais.
-
-6. **Documentação e apresentação**
-
-   * Organização dos resultados.
-   * Preparação da apresentação final.
-   * Comunicação das principais conclusões de forma clara e responsável.
-
----
+* análise exploratória de dados;
+* preparação e tratamento de dados;
+* interpretação de variáveis socioeconómicas;
+* modelação supervisionada;
+* avaliação de modelos de classificação;
+* comunicação de resultados analíticos;
+* documentação técnica;
+* trabalho em equipa;
+* pensamento crítico;
+* responsabilidade ética no uso de dados;
+* proteção e confidencialidade de informação sensível.
 
 ## O que está disponível neste repositório
 
 Este repositório pode incluir:
 
 * descrição geral do projeto;
-* enquadramento do problema;
-* metodologia utilizada;
+* documentação metodológica;
 * estrutura conceptual da análise;
-* documentação não sensível;
+* documentação por milestones;
+* evidências visuais não sensíveis;
 * reflexões sobre o processo de desenvolvimento;
-* eventuais gráficos, exemplos ou outputs anonimizados, caso aplicável.
-
----
+* descrição das técnicas utilizadas.
 
 ## O que não está disponível
 
-Por motivos de confidencialidade, este repositório **não inclui**:
+Por motivos de confidencialidade e proteção de dados, este repositório não inclui:
 
 * dados originais;
-* dados pessoais ou sensíveis;
-* código completo do projeto;
-* notebooks com acesso a informação confidencial;
-* outputs que permitam reconstruir os dados;
-* documentação interna não autorizada;
-* ficheiros ou resultados que possam comprometer a privacidade dos envolvidos.
-
----
-
-## Principais competências desenvolvidas
-
-Este projeto permitiu desenvolver competências em:
-
-* análise exploratória de dados;
-* preparação e limpeza de dados;
-* modelação supervisionada;
-* avaliação de modelos de classificação;
-* interpretação de resultados;
-* comunicação de conclusões analíticas;
-* trabalho em equipa;
-* documentação técnica;
-* responsabilidade ética no uso de dados;
-* proteção de dados e confidencialidade.
-
----
+* dados pessoais;
+* dados socioeconómicos individualizados;
+* código completo;
+* notebooks integrais;
+* outputs sensíveis;
+* ficheiros internos não autorizados;
+* qualquer informação que permita reconstruir ou identificar dados privados.
 
 ## Limitações
 
-Este repositório não deve ser interpretado como uma versão completa ou reproduzível do projeto original.
+Este repositório não deve ser interpretado como uma versão totalmente reproduzível do projeto original.
 
-A ausência dos dados e do código completo resulta de uma decisão deliberada de proteção de informação sensível e de respeito pelos princípios de privacidade e confidencialidade.
+A ausência dos dados e do código completo resulta de uma decisão deliberada de proteção de informação sensível e de respeito pelos princípios de privacidade, confidencialidade e utilização responsável de dados.
 
----
-
-## Possível evolução futura
-
-Uma evolução futura deste projeto poderá passar pela criação de uma versão demonstrativa com:
-
-* dados sintéticos;
-* dados públicos;
-* notebooks totalmente reproduzíveis;
-* dashboard interativo;
-* pipeline completo de análise;
-* documentação técnica aberta.
-
-Essa versão permitiria demonstrar a metodologia utilizada sem comprometer dados sensíveis ou informação confidencial.
-
----
-
-## Autores
-
-**Afonso Nunes**
-**Duarte Ribeiro**
-**Guilherme Ventura**
-
-## Orientadora
-
-**Dora Melo**
-Licenciado em Ciência de Dados para a Gestão
-Coimbra Business School | ISCAC
-
-Interesses: Ciência de Dados, Inteligência Artificial, IA Generativa, Apoio à Decisão, Análise de Risco e Automação de Processos Empresariais.
